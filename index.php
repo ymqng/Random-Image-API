@@ -1,6 +1,6 @@
 <?php
 // ==============================================
-// 图片随机服务API - 支持刷新更新版
+// 随机图片API
 // ==============================================
 
 // 生产环境建议关闭错误显示
@@ -13,11 +13,9 @@ define('IMAGE_BASE_DIR', __DIR__ . '/images/');
 define('STATS_FILE', __DIR__ . '/stats/counter.json');
 define('LIBRARY_MAP', [
     'pc'   => 'landscape',   // 横屏库
-    'pe'   => 'portrait',    // 竖屏库
-    'bs'   => 'baisi',       // 白丝写真
-    'miku' => 'Hatsune_Miku' // 初音未来库
+    'pe'   => 'portrait'     // 竖屏库
 ]);
-define('HMAC_SECRET', 'luotianyi-66ccff'); // 重要！需修改为随机字符串
+define('HMAC_SECRET', 'luotianyi-huafengxiayun-luoshuitianyi'); // 重要！需修改为随机字符串
 
 // ==============================================
 // 主处理逻辑
@@ -132,7 +130,7 @@ function outputImage($imagePath, $isDownload) {
 }
 
 // ==============================================
-// 统计功能（保持不变）
+// 统计功能
 // ==============================================
 function updateStatistics($suffix) {
     if (!file_exists(STATS_FILE)) {

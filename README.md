@@ -20,11 +20,8 @@ https://api.lty.moe
   - /bs
 
 ### 指定库调用示例
+
 `https://api.lty.moe/pc`
-
-#### 效果
-
-![随机横屏天依](https://api.lty.moe)
 
 ## 添加图片库
 1. 打开 index.php 文件
